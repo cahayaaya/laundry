@@ -35,15 +35,14 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvPink"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:layout_constraintTop_toBottomOf="@id/tvTanggal"
+        android:layout_width="230dp"
+        android:layout_height="320dp"
+        app:layout_constraintTop_toBottomOf="@id/tvSelamat"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="15dp"
         android:layout_marginBottom="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
         app:layout_constraintBottom_toTopOf="@id/tvsaran"
-        android:layout_marginEnd="15dp"
         app:cardBackgroundColor="#F2E3E3"
         app:cardCornerRadius="15dp">
 
@@ -57,9 +56,9 @@
         android:layout_height="wrap_content"
         android:text="Estimasi Hari Ini"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:textColor="@color/black"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/garis"
@@ -71,8 +70,7 @@
         android:layout_height="wrap_content"
         android:text="Rp 40.000,-"
         android:textColor="@color/black"
-        android:textSize="20sp"
-        android:layout_marginTop="15dp"
+        android:textSize="15sp"
         android:layout_marginEnd="10dp"
         app:layout_constraintBottom_toTopOf="@id/garis"
         app:layout_constraintTop_toTopOf="parent"
@@ -87,77 +85,77 @@
             app:layout_constraintTop_toBottomOf="@id/tvEstimasi"/>
 
         <ImageView
-            android:id="@+id/transaksi"
+            android:id="@+id/akun"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/transaksi"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/user"
             app:layout_constraintTop_toBottomOf="@id/garis"
-            app:layout_constraintBottom_toTopOf="@id/tvpembayaran"
-            app:layout_constraintEnd_toStartOf="@id/customer"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/pegawai"
             />
 
         <ImageView
-            android:id="@+id/customer"
+            android:id="@+id/pegawai"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/customer"
-            app:layout_constraintEnd_toStartOf="@id/laporan"
-            app:layout_constraintStart_toEndOf="@+id/transaksi"
-            app:layout_constraintBottom_toTopOf="@id/tvcustomer"
-            app:layout_constraintTop_toBottomOf="@+id/garis"/>
+            android:layout_marginStart="20dp"
+            android:src="@drawable/pegawai"
+            app:layout_constraintTop_toBottomOf="@id/akun"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/home"/>
 
         <ImageView
-            android:id="@+id/laporan"
+            android:id="@+id/home"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/laporan"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/garis"
-            app:layout_constraintStart_toEndOf="@id/customer"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/home"
+            app:layout_constraintTop_toBottomOf="@id/pegawai"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginTop="15dp"/>
+            />
 
         <TextView
-            android:id="@+id/tvpembayaran"
+            android:id="@+id/tvakun"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="Transaksi"
+            android:text="Akun"
+            android:layout_marginBottom="25dp"
             android:textSize="16sp"
             android:textColor="@color/black"
-            app:layout_constraintTop_toBottomOf="@id/transaksi"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="35dp"
+            app:layout_constraintBottom_toTopOf="@id/tvpegawai"
+            app:layout_constraintStart_toEndOf="@id/akun"
+            app:layout_constraintTop_toBottomOf="@id/garis"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvpegawai"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Pegawai"
+            android:textSize="16dp"
+            android:layout_marginBottom="20dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/tvakun"
+            app:layout_constraintStart_toEndOf="@id/pegawai"
+            app:layout_constraintBottom_toTopOf="@id/tvcabang"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvcabang"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Cabang"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/tvpegawai"
+            app:layout_constraintStart_toEndOf="@id/home"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginTop="5dp"/>
-
-        <TextView
-            android:id="@+id/tvcustomer"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:text="Pelanggan"
-            android:textSize="16dp"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            app:layout_constraintTop_toBottomOf="@id/customer"
-            app:layout_constraintStart_toEndOf="@id/tvpembayaran"
-            app:layout_constraintEnd_toStartOf="@id/tvlaporan"
-            app:layout_constraintBottom_toBottomOf="parent"/>
-
-        <TextView
-            android:id="@+id/tvlaporan"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:text="Laporan"
-            android:textColor="@color/black"
-            android:textSize="16dp"
-            android:textAlignment="center"
-            app:layout_constraintTop_toBottomOf="@id/laporan"
-            app:layout_constraintStart_toEndOf="@id/tvcustomer"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -170,6 +168,7 @@
             android:layout_height="wrap_content"
             android:text="Siap melayani pelanggan dengan setulus hati"
             android:textSize="23sp"
+            android:visibility="gone"
             android:textStyle="bold"
             android:textAlignment="center"
             android:textColor="@color/black"
@@ -186,6 +185,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Jangan Kecewakan Pelanggan"
+            android:visibility="gone"
             android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -196,24 +196,27 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cvdua"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             app:cardBackgroundColor="#F2E3E3"
             app:cardCornerRadius="15dp"
-            android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toStartOf="@id/cvtiga"
-            app:layout_constraintTop_toBottomOf="@id/tvsaran"
-            app:layout_constraintStart_toStartOf="parent">
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toTopOf="@id/cvlima"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSelamat"
+           app:layout_constraintStart_toEndOf="@id/cvPink"
+            app:layout_constraintEnd_toStartOf="@id/cvtiga">
 
         <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" >
 
         <ImageView
-            android:id="@+id/akun"
+            android:id="@+id/transaksi"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/user"
+            android:src="@drawable/transaksi"
             android:layout_marginBottom="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -221,14 +224,14 @@
             app:layout_constraintEnd_toEndOf="parent"/>
 
         <TextView
-            android:id="@+id/tvakun"
+            android:id="@+id/tvtransaksi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Akun"
+            android:text="Transaksi"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:layout_marginTop="5dp"
-            app:layout_constraintTop_toBottomOf="@id/akun"
+            app:layout_constraintTop_toBottomOf="@id/transaksi"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
 
@@ -237,12 +240,14 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvtiga"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         app:cardBackgroundColor="#F2E3E3"
         app:cardCornerRadius="15dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@id/tvsaran"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/cvenam"
+        app:layout_constraintTop_toBottomOf="@id/tvSelamat"
         app:layout_constraintStart_toEndOf="@id/cvdua"
         app:layout_constraintEnd_toStartOf="@id/cvempat">
 
@@ -278,12 +283,14 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvempat"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         app:cardBackgroundColor="#F2E3E3"
         app:cardCornerRadius="15dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@id/tvsaran"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toTopOf="@id/cvtujuh"
+        app:layout_constraintTop_toBottomOf="@id/tvSelamat"
         app:layout_constraintStart_toEndOf="@id/cvtiga"
         app:layout_constraintEnd_toEndOf="parent">
 
@@ -319,53 +326,54 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvlima"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         app:cardBackgroundColor="#F2E3E3"
         app:cardCornerRadius="15dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintEnd_toStartOf="@id/cvenam"
         app:layout_constraintTop_toBottomOf="@id/cvdua"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cvPink">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/pegawai"
+                android:id="@+id/customer"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginBottom="20dp"
-                android:src="@drawable/pegawai"
+                android:src="@drawable/customer"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tvpegawai"
+                android:id="@+id/tvpelangan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Pegawai"
+                android:text="Pelanggan"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/pegawai" />
+                app:layout_constraintTop_toBottomOf="@id/customer" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvenam"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         app:cardBackgroundColor="#F2E3E3"
         app:cardCornerRadius="15dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cvtiga"
         app:layout_constraintStart_toEndOf="@id/cvlima"
         app:layout_constraintEnd_toStartOf="@id/cvtujuh">
@@ -375,10 +383,10 @@
             android:layout_height="match_parent" >
 
             <ImageView
-                android:id="@+id/cabang"
+                android:id="@+id/laporan"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:src="@drawable/home"
+                android:src="@drawable/laporan"
                 android:layout_marginBottom="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -386,14 +394,14 @@
                 app:layout_constraintEnd_toEndOf="parent"/>
 
             <TextView
-                android:id="@+id/tvcabang"
+                android:id="@+id/tvlaporan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Cabang"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:layout_marginTop="5dp"
-                app:layout_constraintTop_toBottomOf="@id/cabang"
+                app:layout_constraintTop_toBottomOf="@id/laporan"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"/>
 
@@ -402,11 +410,12 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvtujuh"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         app:cardBackgroundColor="#F2E3E3"
         app:cardCornerRadius="15dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cvempat"
         app:layout_constraintStart_toEndOf="@id/cvenam"
         app:layout_constraintEnd_toEndOf="parent">
