@@ -21,4 +21,8 @@
     <string name="card_pelanggan_namacabang">Branch Name</string>
     <string name="card_pelanggan_simpan">Save</string>
     <string name="card_pegawai_tambah">Added Employee</string>
+    <string name="card_layanan_id">Service ID</string>
+    <string name="card_layanan_nama">Service Name</string>
+    <string name="card_layanan_harga">Price</string>
+    <string name="card_layanan_namacabang">Branch Name</string>
 </resources>

@@ -20,4 +20,8 @@
     <string name="card_pelanggan_namacabang">Nama Cabang</string>
     <string name="card_pelanggan_simpan">Simpan</string>
     <string name="card_pegawai_tambah">Tambah Pegawai</string>
+    <string name="card_layanan_id">ID Layanan</string>
+    <string name="card_layanan_nama">Nama Layanan</string>
+    <string name="card_layanan_harga">Harga</string>
+    <string name="card_layanan_namacabang">Nama Cabang</string>
 </resources>

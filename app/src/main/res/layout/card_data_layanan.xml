@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvCard_Layanan"
+    android:padding="16dp"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="10dp">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:backgroundTint="#DEB3B3">
+
+        <TextView
+            android:id="@+id/tvCard_Layanan_Id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/card_pelanggan_id"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="4dp"
+            android:layout_marginStart="10dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/lvCard_Pelanggan"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:background="#E0C4C4">
+
+
+        <TextView
+            android:id="@+id/tvCard_Pelanggan_Layanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/card_pelanggan_nama"
+            android:textSize="16sp"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="5dp"/>
+
+        <TextView
+            android:id="@+id/tvCard_Pelanggan_Harga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/card_pelanggan_alamat"
+            android:textSize="16sp"
+            android:layout_marginStart="5dp"/>
+
+        <TextView
+            android:id="@+id/tvCard_Pelanggan_NamaCabang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/card_pelanggan_NoHp"
+            android:textSize="16sp"
+            android:layout_marginStart="5dp"/>
+
+
+
+
+    </LinearLayout></androidx.cardview.widget.CardView>
