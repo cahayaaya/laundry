@@ -20,4 +20,5 @@
     <string name="card_pelanggan_nohp">Phone Number</string>
     <string name="card_pelanggan_namacabang">Branch Name</string>
     <string name="card_pelanggan_simpan">Save</string>
+    <string name="card_pegawai_tambah">Added Employee</string>
 </resources>

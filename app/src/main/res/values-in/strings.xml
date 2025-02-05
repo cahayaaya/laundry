@@ -20,4 +20,5 @@
     <string name="card_pelanggan_nohp">No HP</string>
     <string name="card_pelanggan_namacabang">Nama Cabang</string>
     <string name="card_pelanggan_simpan">Simpan</string>
+    <string name="card_pegawai_tambah">Tambah Pegawai</string>
 </resources>
