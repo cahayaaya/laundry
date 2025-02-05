@@ -1,12 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">laundry</string>
-    <string name="card_pelanggan_id">Pelanggan ID</string>
+    <string name="card_pelanggan_id">ID Pelanggan</string>
     <string name="card_pelanggan_nama">Nama Pelanggan</string>
-    <string name="card_pelanggan_alamat">"Alamat "</string>
+    <string name="card_pelanggan_alamat">Alamat</string>
     <string name="card_pelanggan_NoHp">No HP</string>
     <string name="card_pelanggan_hubungi">Hubungi</string>
     <string name="card_pelanggan_lihat">Lihat</string>
-    <string name="card_pegawai_ID">ID pegawai</string>
+    <string name="card_pegawai_ID">ID Pegawai</string>
     <string name="card_pegawai_Nama">Nama Pegawai</string>
     <string name="card_pegawai_No">No HP</string>
     <string name="card_pegawai_terdaftar">Terdaftar</string>
