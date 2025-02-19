@@ -25,4 +25,9 @@
     <string name="card_layanan_nama">Nama Layanan</string>
     <string name="card_layanan_harga">Harga</string>
     <string name="card_layanan_namacabang">Nama Cabang</string>
+    <string name="sukses_simpan_pelanggan">Berhasil Menyimpan</string>
+    <string name="gagal_simpan_pelanggan">Gagal Menyimpan</string>
+    <string name="validasi_Pelanggan_Nama">nama tidak boleh kosong</string>
+    <string name="validasi_Pelanggan_Alamat">alamat tidak boleh kosong</string>
+    <string name="validasi_Pelanggan_NoHP">no hp tidak boleh kosong</string>
 </resources>

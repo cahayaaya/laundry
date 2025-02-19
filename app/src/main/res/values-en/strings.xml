@@ -25,4 +25,9 @@
     <string name="card_layanan_nama">Service Name</string>
     <string name="card_layanan_harga">Price</string>
     <string name="card_layanan_namacabang">Branch Name</string>
+    <string name="sukses_simpan_pelanggan">saved successfully</string>
+    <string name="gagal_simpan_pelanggan">Failed To Save</string>
+    <string name="validasi_Pelanggan_Nama">Name cannot be empty</string>
+    <string name="validasi_Pelanggan_Alamat">the address connot be empty</string>
+    <string name="validasi_Pelanggan_NoHP">Phone Number cannot be empty</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.cahayaaya.laundry.pegawai
+package com.cahayaaya.laundry.layanan
 
 import android.os.Bundle
 import android.widget.Button
@@ -11,22 +11,20 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.cahayaaya.laundry.R
 import com.cahayaaya.laundry.modeldata.ModelPegawai
-import com.cahayaaya.laundry.modeldata.ModelPelanggan
 import com.google.firebase.database.FirebaseDatabase
 
-class TambahPegawai : AppCompatActivity() {
+class TambahLayanan : AppCompatActivity() {
     val  database = FirebaseDatabase.getInstance()
-    val myRef = database.getReference("pegawai")
+    val myRef = database.getReference("layanan")
     lateinit var tvTitle: TextView
     lateinit var etgaris1: EditText
     lateinit var etgaris2: EditText
     lateinit var etgaris3: EditText
-    lateinit var etgaris4: EditText
     lateinit var btsimpan: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_tambah_pegawai)
+        setContentView(R.layout.activity_tambah_layanan)
         init()
         btsimpan.setOnClickListener {
             cekValidasi()
@@ -43,14 +41,12 @@ class TambahPegawai : AppCompatActivity() {
         etgaris1 = findViewById(R.id.etgaris1)
         etgaris2 = findViewById(R.id.etgaris2)
         etgaris3 = findViewById(R.id.etgaris3)
-        etgaris4 = findViewById(R.id.etgaris4)
         btsimpan = findViewById(R.id.btsimpan)
     }
     fun  cekValidasi() {
         val nama = etgaris1.text.toString()
-        val alamat = etgaris2.text.toString()
-        val noHP = etgaris3.text.toString()
-        val namacabang = etgaris4.text.toString()
+        val harga = etgaris2.text.toString()
+        val namacabang = etgaris3.text.toString()
 
         //validasi data
         if (nama.isEmpty()) {
@@ -63,7 +59,7 @@ class TambahPegawai : AppCompatActivity() {
             etgaris1.requestFocus()
             return
         }
-        if (alamat.isEmpty()) {
+        if (harga.isEmpty()) {
             etgaris2.error = this.getString(R.string.validasi_Pelanggan_Alamat)
             Toast.makeText(
                 this,
@@ -73,7 +69,7 @@ class TambahPegawai : AppCompatActivity() {
             etgaris2.requestFocus()
             return
         }
-        if (noHP.isEmpty()) {
+        if (namacabang.isEmpty()) {
             etgaris3.error = this.getString(R.string.validasi_Pelanggan_NoHP)
             Toast.makeText(
                 this,
@@ -81,16 +77,6 @@ class TambahPegawai : AppCompatActivity() {
                 Toast.LENGTH_SHORT
             ).show()
             etgaris3.requestFocus()
-            return
-        }
-        if (namacabang.isEmpty()) {
-            etgaris4.error = this.getString(R.string.validasi_Pelanggan_NoHP)
-            Toast.makeText(
-                this,
-                this.getString(R.string.validasi_Pelanggan_NoHP),
-                Toast.LENGTH_SHORT
-            ).show()
-            etgaris4.requestFocus()
             return
         }
         simpan()
@@ -104,9 +90,8 @@ class TambahPegawai : AppCompatActivity() {
             etgaris1.text.toString(),
             etgaris2.text.toString(),
             etgaris3.text.toString(),
-            etgaris4.text.toString(),
 
-        )
+            )
         pegawaiBaru.setValue(data)
             .addOnSuccessListener {
                 Toast.makeText(this,this.getString(R.string.sukses_simpan_pelanggan), Toast.LENGTH_SHORT).show()

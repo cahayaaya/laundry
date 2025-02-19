@@ -5,20 +5,20 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pegawai.DataPegawai">
+    tools:context=".layanan.DataLayanan">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_data_pegawai"
+        android:id="@+id/rv_data_layanan"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/card_data_pegawai">
+        tools:listitem="@layout/card_data_layanan">
     </androidx.recyclerview.widget.RecyclerView>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/bt_data_pegawai_tambah"
+            android:id="@+id/bt_data_layanan_tambah"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/iconplus"
