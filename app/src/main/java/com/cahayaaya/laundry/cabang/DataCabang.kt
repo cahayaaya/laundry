@@ -1,4 +1,4 @@
-package com.cahayaaya.laundry.pegawai
+package com.cahayaaya.laundry.cabang
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,39 +10,39 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.cahayaaya.laundry.R
+import com.cahayaaya.laundry.adapter.DataCabangAdapter
+import com.cahayaaya.laundry.adapter.DataLayananAdapter
 import com.cahayaaya.laundry.adapter.DataPegawaiAdapter
-import com.cahayaaya.laundry.adapter.DataPelangganAdapter
+import com.cahayaaya.laundry.modeldata.ModelCabang
+import com.cahayaaya.laundry.modeldata.ModelLayanan
 import com.cahayaaya.laundry.modeldata.ModelPegawai
-import com.cahayaaya.laundry.modeldata.ModelPelanggan
-import com.cahayaaya.laundry.pelanggan.TambahPelanggan
+import com.cahayaaya.laundry.pegawai.TambahPegawai
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
-class DataPegawai : AppCompatActivity() {
+class DataCabang : AppCompatActivity() {
     val database = FirebaseDatabase.getInstance()
-    val myRef = database.getReference("pegawai")
-    lateinit var rv_data_pegawai: RecyclerView
-    lateinit var bt_data_pegawai_tambah: FloatingActionButton
-    lateinit var pegawaiList: ArrayList<ModelPegawai>
-
+    val myRef = database.getReference("cabang")
+    lateinit var rv_data_cabang: RecyclerView
+    lateinit var bt_data_cabang_tambah: FloatingActionButton
+    lateinit var cabangList: ArrayList<ModelCabang>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_data_pegawai)
+        setContentView(R.layout.activity_data_cabang)
         init()
         val layoutManager = LinearLayoutManager(this)
         layoutManager.reverseLayout = true
         layoutManager.stackFromEnd = true
-        rv_data_pegawai.layoutManager=layoutManager
-        rv_data_pegawai.setHasFixedSize(true)
-        pegawaiList = arrayListOf<ModelPegawai>()
+        rv_data_cabang.layoutManager=layoutManager
+        rv_data_cabang.setHasFixedSize(true)
+        cabangList = arrayListOf<ModelCabang>()
         tekan()
         getdata()
-
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -51,41 +51,34 @@ class DataPegawai : AppCompatActivity() {
     }
 
     fun getdata() {
-        val query = myRef.orderByChild("idPegawai").limitToLast(100)
+        val query = myRef.orderByChild("idLayanan").limitToLast(100)
         query.addValueEventListener(object : ValueEventListener {
             override fun  onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()){
-                    pegawaiList.clear()
+                    cabangList.clear()
                     for (dataSnapshot in snapshot.children){
-                        val pegawai = dataSnapshot.getValue(ModelPegawai::class.java)
-                        pegawaiList.add(pegawai!!)
+                        val cabang = dataSnapshot.getValue(ModelCabang::class.java)
+                        cabangList.add(cabang!!)
                     }
-                    val adapter = DataPegawaiAdapter(pegawaiList)
-                    rv_data_pegawai.adapter = adapter
+                    val adapter = DataCabangAdapter(cabangList)
+                    rv_data_cabang.adapter = adapter
                     adapter.notifyDataSetChanged()
                 }
             }
             override fun  onCancelled(error : DatabaseError) {
-                Toast.makeText(this@DataPegawai, error.message, Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@DataCabang, error.message, Toast.LENGTH_SHORT).show()
             }
         })
     }
 
     fun init() {
-        rv_data_pegawai = findViewById(R.id.rv_data_pegawai)
-        bt_data_pegawai_tambah = findViewById(R.id.bt_data_pegawai_tambah)
-        bt_data_pegawai_tambah.setOnClickListener {
-            val intent = Intent(this, TambahPegawai::class.java)
-            startActivity(intent)
-        }
+        rv_data_cabang = findViewById(R.id.rv_data_cabang)
+        bt_data_cabang_tambah = findViewById(R.id.bt_data_pengguna_tambah)
     }
     fun tekan() {
-        bt_data_pegawai_tambah.setOnClickListener {
-            val intent = Intent(this, TambahPegawai::class.java)
+        bt_data_cabang_tambah.setOnClickListener {
+            val intent = Intent(this, TambahCabang::class.java)
             startActivity(intent)
         }
     }
-
-
-
 }

@@ -37,11 +37,11 @@ class TambahLayanan : AppCompatActivity() {
     }
 
     fun  init(){
-        tvTitle = findViewById(R.id.tvTitle)
-        etgaris1 = findViewById(R.id.etgaris1)
-        etgaris2 = findViewById(R.id.etgaris2)
-        etgaris3 = findViewById(R.id.etgaris3)
-        btsimpan = findViewById(R.id.btsimpan)
+        tvTitle = findViewById(R.id.tvTitleLayanan)
+        etgaris1 = findViewById(R.id.etgaris1layanan)
+        etgaris2 = findViewById(R.id.etgaris2layanan)
+        etgaris3 = findViewById(R.id.etgaris3layanan)
+        btsimpan = findViewById(R.id.btsimpanLayanan)
     }
     fun  cekValidasi() {
         val nama = etgaris1.text.toString()
@@ -50,30 +50,30 @@ class TambahLayanan : AppCompatActivity() {
 
         //validasi data
         if (nama.isEmpty()) {
-            etgaris1.error = this.getString(R.string.validasi_Pelanggan_Nama)
+            etgaris1.error = this.getString(R.string.validasi_Layanan_Nama)
             Toast.makeText(
                 this,
-                this.getString(R.string.validasi_Pelanggan_Nama),
+                this.getString(R.string.validasi_Layanan_Nama),
                 Toast.LENGTH_SHORT
             ).show()
             etgaris1.requestFocus()
             return
         }
         if (harga.isEmpty()) {
-            etgaris2.error = this.getString(R.string.validasi_Pelanggan_Alamat)
+            etgaris2.error = this.getString(R.string.validasi_Layanan_Harga)
             Toast.makeText(
                 this,
-                this.getString(R.string.validasi_Pelanggan_Alamat),
+                this.getString(R.string.validasi_Layanan_Harga),
                 Toast.LENGTH_SHORT
             ).show()
             etgaris2.requestFocus()
             return
         }
         if (namacabang.isEmpty()) {
-            etgaris3.error = this.getString(R.string.validasi_Pelanggan_NoHP)
+            etgaris3.error = this.getString(R.string.validasi_Layanan_namacabang)
             Toast.makeText(
                 this,
-                this.getString(R.string.validasi_Pelanggan_NoHP),
+                this.getString(R.string.validasi_Layanan_namacabang),
                 Toast.LENGTH_SHORT
             ).show()
             etgaris3.requestFocus()

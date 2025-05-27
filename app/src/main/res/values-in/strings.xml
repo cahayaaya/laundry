@@ -30,4 +30,13 @@
     <string name="validasi_Pelanggan_Nama">nama tidak boleh kosong</string>
     <string name="validasi_Pelanggan_Alamat">alamat tidak boleh kosong</string>
     <string name="validasi_Pelanggan_NoHP">no hp tidak boleh kosong</string>
+    <string name="validasi_Layanan_Nama">nama tidak boleh kosong</string>
+    <string name="validasi_Layanan_namacabang">nama cabang tidak boleh kosong</string>
+    <string name="validasi_Layanan_Harga">harga tidak boleh kosong</string>
+    <string name="validasi_Cabang_Nama">Nama Cabang</string>
+    <string name="validasi_Cabang_Alamat">Alamat Cabang</string>
+    <string name="validasi_Cabang_Telepon">Telepon Cabang</string>
+    <string name="validasi_Cabang_Layanan">Layanan Cabang</string>
+    <string name="sukses_simpan_cabang">Sukses Simpan Cabang</string>
+    <string name="gagal_simpan_cabang">Gagal Simpan Cabang</string>
 </resources>

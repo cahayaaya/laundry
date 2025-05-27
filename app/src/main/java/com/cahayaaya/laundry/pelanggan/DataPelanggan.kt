@@ -77,7 +77,7 @@ class DataPelanggan : AppCompatActivity() {
     }
     fun tekan() {
         bt_data_pengguna_tambah.setOnClickListener {
-            val intent = Intent(this, TambahPegawai::class.java)
+            val intent = Intent(this, TambahPelanggan::class.java)
             startActivity(intent)
         }
     }

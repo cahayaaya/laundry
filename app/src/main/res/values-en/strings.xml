@@ -30,4 +30,13 @@
     <string name="validasi_Pelanggan_Nama">Name cannot be empty</string>
     <string name="validasi_Pelanggan_Alamat">the address connot be empty</string>
     <string name="validasi_Pelanggan_NoHP">Phone Number cannot be empty</string>
+    <string name="validasi_Layanan_Nama">Name cannot be empty</string>
+    <string name="validasi_Layanan_namacabang">Branch name cannot be empty</string>
+    <string name="validasi_Layanan_Harga">Price cannot be empty</string>
+    <string name="validasi_Cabang_Nama">Name Branch</string>
+    <string name="validasi_Cabang_Alamat">Address Branch</string>
+    <string name="validasi_Cabang_Telepon">Phone Branch</string>
+    <string name="validasi_Cabang_Layanan">Service Branch</string>
+    <string name="sukses_simpan_cabang">Successful Save Branch</string>
+    <string name="gagal_simpan_cabang">Failed Save Branch</string>
 </resources>

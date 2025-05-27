@@ -9,116 +9,118 @@
     tools:context=".layanan.TambahLayanan">
 
     <TextView
-        android:id="@+id/tvTitle"
+        android:id="@+id/tvTitleLayanan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nama Layanan"
+        android:text="@string/card_layanan_nama"
         android:layout_marginStart="10dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/tvNama"
+        app:layout_constraintBottom_toTopOf="@id/tvNamaLayanan"
         android:textColor="@color/black"/>
 
     <TextView
-        android:id="@+id/tvNama"
+        android:id="@+id/tvNamaLayanan"
         android:layout_width="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_height="wrap_content"
-        android:text="Nama Layanan"
+        android:text="@string/card_layanan_nama"
         android:textSize="15sp"
         android:textColor="@color/black"
         android:layout_marginStart="10dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
-        app:layout_constraintBottom_toTopOf="@+id/etgaris1"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleLayanan"
+        app:layout_constraintBottom_toTopOf="@+id/etgaris1layanan"/>
 
     <EditText
-        android:id="@+id/etgaris1"
+        android:id="@+id/etgaris1layanan"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        android:hint="Nama Layanan"
+        android:hint="@string/card_layanan_nama"
         android:paddingLeft="10dp"
         android:background="@drawable/rectangle"
         android:layout_marginStart="20dp"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginEnd="20dp"
-        app:layout_constraintBottom_toTopOf="@id/tvAlamat"
-        app:layout_constraintTop_toBottomOf="@+id/tvNama"/>
+        app:layout_constraintBottom_toTopOf="@id/tvAlamatLayanan"
+        app:layout_constraintTop_toBottomOf="@+id/tvNamaLayanan"/>
 
     <TextView
-        android:id="@+id/tvAlamat"
+        android:id="@+id/tvAlamatLayanan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Harga"
+        android:text="@string/card_layanan_harga"
         android:textSize="15sp"
         android:textColor="@color/black"
         android:layout_marginStart="10dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/etgaris2"
-        app:layout_constraintTop_toBottomOf="@+id/etgaris1"/>
+        app:layout_constraintBottom_toTopOf="@id/etgaris2layanan"
+        app:layout_constraintTop_toBottomOf="@+id/etgaris1layanan"/>
 
     <EditText
-        android:id="@+id/etgaris2"
+        android:id="@+id/etgaris2layanan"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:textColor="@color/black"
-        android:hint="Harga"
+        android:hint="@string/card_layanan_harga"
         android:paddingLeft="10dp"
+        android:maxLength="7"
+        android:inputType="number"
         android:background="@drawable/rectangle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        app:layout_constraintBottom_toTopOf="@id/tvNo"
-        app:layout_constraintTop_toBottomOf="@+id/tvAlamat"/>
+        app:layout_constraintBottom_toTopOf="@id/tvNoLayanan"
+        app:layout_constraintTop_toBottomOf="@+id/tvAlamatLayanan"/>
 
     <TextView
-        android:id="@+id/tvNo"
+        android:id="@+id/tvNoLayanan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nama Cabang"
+        android:text="@string/card_layanan_namacabang"
         android:textSize="15sp"
         android:textColor="@color/black"
         android:layout_marginStart="10dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/etgaris3"
-        app:layout_constraintTop_toBottomOf="@+id/etgaris2"/>
+        app:layout_constraintBottom_toTopOf="@id/etgaris3layanan"
+        app:layout_constraintTop_toBottomOf="@+id/etgaris2layanan"/>
 
     <EditText
-        android:id="@+id/etgaris3"
+        android:id="@+id/etgaris3layanan"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:background="@drawable/rectangle"
-        android:hint="Nama Cabang"
+        android:hint="@string/card_layanan_namacabang"
         android:textColor="@color/black"
         android:layout_marginEnd="20dp"
         android:paddingLeft="10dp"
         android:layout_marginStart="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/btsimpan"
+        app:layout_constraintBottom_toTopOf="@id/btsimpanLayanan"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNo" />
+        app:layout_constraintTop_toBottomOf="@+id/tvNoLayanan" />
 
 
     <Button
-        android:id="@+id/btsimpan"
+        android:id="@+id/btsimpanLayanan"
         android:layout_width="250dp"
         android:layout_height="60dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginTop="30dp"
-        app:layout_constraintTop_toBottomOf="@id/etgaris3"
+        app:layout_constraintTop_toBottomOf="@id/etgaris3layanan"
         android:text="@string/card_pelanggan_simpan"
         android:textSize="20dp"
         android:layout_marginBottom="200dp"/>

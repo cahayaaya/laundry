@@ -37,11 +37,11 @@ class TambahPelanggan : AppCompatActivity() {
     }
 
     fun  init(){
-        tvJudul = findViewById(R.id.tvTitle)
-        etNama = findViewById(R.id.etgaris1)
-        etAlamat = findViewById(R.id.etgaris2)
-        etNoHP = findViewById(R.id.etgaris3)
-        btSimpan = findViewById(R.id.btsimpan)
+        tvJudul = findViewById(R.id.tvTitlePelanggan)
+        etNama = findViewById(R.id.etgaris1pelanggan)
+        etAlamat = findViewById(R.id.etgaris2pelanggan)
+        etNoHP = findViewById(R.id.etgaris3pelanggan)
+        btSimpan = findViewById(R.id.btsimpanpelanggan)
     }
     fun  cekValidasi() {
         val nama = etNama.text.toString()
@@ -59,7 +59,7 @@ class TambahPelanggan : AppCompatActivity() {
             etNama.requestFocus()
             return
         }
-        if (nama.isEmpty()) {
+        if (alamat.isEmpty()) {
             etAlamat.error = this.getString(R.string.validasi_Pelanggan_Alamat)
             Toast.makeText(
                 this,
@@ -69,7 +69,7 @@ class TambahPelanggan : AppCompatActivity() {
             etAlamat.requestFocus()
             return
         }
-        if (nama.isEmpty()) {
+        if (noHP.isEmpty()) {
             etNoHP.error = this.getString(R.string.validasi_Pelanggan_NoHP)
             Toast.makeText(
                 this,

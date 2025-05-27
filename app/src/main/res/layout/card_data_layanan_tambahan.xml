@@ -15,7 +15,7 @@
             android:backgroundTint="#DEB3B3">
 
             <TextView
-                android:id="@+id/tvCard_Layanan_Id"
+                android:id="@+id/tvCardIdLayananTambahan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -29,16 +29,16 @@
 
 
         <LinearLayout
-            android:id="@+id/lvCard_Layanan"
+            android:id="@+id/lvCardLayananTambahan"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="70dp"
             android:layout_marginTop="20dp"
             android:background="#E0C4C4"
             android:orientation="vertical">
 
 
             <TextView
-                android:id="@+id/tvCard_Layanan_Nama"
+                android:id="@+id/tvNamaLayananTambahan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -47,19 +47,11 @@
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/tvCard_Layanan_Harga"
+                android:id="@+id/tvHargaLayananTambahan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="@string/card_layanan_harga"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/tvCard_Layanan_NamaCabang"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:text="@string/card_layanan_namacabang"
                 android:textSize="16sp" />
 
         </LinearLayout>

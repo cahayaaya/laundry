@@ -26,15 +26,10 @@ class DataLayananAdapter(
         val item = listlayanan[position]
         holder.tvID.text = item.tvCard_Layanan_Id
         holder.tvNama.text = item.tvCard_Pelanggan_Layanan
-        holder.tvAlamat.text = item.tvCard_Pelanggan_Harga
+        holder.tvHarga.text = item.tvCard_Pelanggan_Harga
         holder.tvcabang.text = item.tvCard_Pelanggan_NamaCabang
 
-        holder.btCard_Pegawai_Hubungi.setOnClickListener {
 
-        }
-        holder.btCard_Pegawai_Lihat.setOnClickListener {
-
-        }
     }
 
     override fun getItemCount(): Int {
@@ -43,10 +38,9 @@ class DataLayananAdapter(
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvID: TextView = itemView.findViewById(R.id.tvCard_Layanan_Id)
-        val tvNama: TextView = itemView.findViewById(R.id.tvCard_Pelanggan_Layanan)
-        val tvAlamat: TextView = itemView.findViewById(R.id.tvCard_Pelanggan_Harga)
-        val tvcabang: TextView = itemView.findViewById(R.id.tvCard_Pegawai_Cabang)
-        val btCard_Pegawai_Hubungi: TextView = itemView.findViewById(R.id.btCard_Pegawai_Hubungi)
-        val btCard_Pegawai_Lihat: TextView = itemView.findViewById(R.id.btCard_Pegawai_Lihat)
+        val tvNama: TextView = itemView.findViewById(R.id.tvCard_Layanan_Nama)
+        val tvHarga: TextView = itemView.findViewById(R.id.tvCard_Layanan_Harga)
+        val tvcabang: TextView = itemView.findViewById(R.id.tvCard_Layanan_NamaCabang)
+
     }
 }

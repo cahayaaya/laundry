@@ -26,7 +26,16 @@
     <string name="card_layanan_namacabang">Nama Cabang</string>
     <string name="sukses_simpan_pelanggan">berhasil menyimpan</string>
     <string name="gagal_simpan_pelanggan">Gagal Simpan</string>
-    <string name="validasi_Pelanggan_Nama">nama tidak boleh kosong</string>
-    <string name="validasi_Pelanggan_Alamat">alamat tidak boleh kosong</string>
-    <string name="validasi_Pelanggan_NoHP">no hp tidak boleh kosong</string>
+    <string name="validasi_Pelanggan_Nama">"nama "</string>
+    <string name="validasi_Pelanggan_Alamat">"alamat "</string>
+    <string name="validasi_Pelanggan_NoHP">"no hp "</string>
+    <string name="validasi_Layanan_Nama">nama</string>
+    <string name="validasi_Layanan_namacabang">"nama cabang  "</string>
+    <string name="validasi_Layanan_Harga">harga</string>
+    <string name="validasi_Cabang_Nama">Cabang Nama</string>
+    <string name="validasi_Cabang_Alamat">Alamat Cabang</string>
+    <string name="validasi_Cabang_Telepon">Telepon Cabang</string>
+    <string name="validasi_Cabang_Layanan">Layanan Cabang</string>
+    <string name="sukses_simpan_cabang">simpan cabang</string>
+    <string name="gagal_simpan_cabang">gagal cabang</string>
 </resources>
