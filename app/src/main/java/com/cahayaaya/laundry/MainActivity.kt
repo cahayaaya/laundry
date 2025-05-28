@@ -12,6 +12,8 @@ import com.cahayaaya.laundry.cabang.DataCabang
 import com.cahayaaya.laundry.layanan.DataLayanan
 import com.cahayaaya.laundry.pegawai.DataPegawai
 import com.cahayaaya.laundry.pelanggan.DataPelanggan
+import com.cahayaaya.laundry.tambahan.DataTambahan
+import com.cahayaaya.laundry.tambahan.TambahTambahan
 import com.cahayaaya.laundry.transaksi.transaksiMainActivity
 
 
@@ -21,6 +23,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var layanan: ImageView
     lateinit var cabang: ImageView
     lateinit var transaksi: ImageView
+    lateinit var  tambahan : ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         layanan=findViewById(R.id.mesincuci)
         cabang=findViewById(R.id.cabang)
         transaksi=findViewById(R.id.transaksi)
+        tambahan=findViewById(R.id.tambahan)
 
         pegawai.setOnClickListener{
             val intent = Intent(this,DataPegawai::class.java)
@@ -51,6 +55,10 @@ class MainActivity : AppCompatActivity() {
         }
         transaksi.setOnClickListener{
             val intent = Intent(this,transaksiMainActivity::class.java)
+            startActivity(intent)
+        }
+        tambahan.setOnClickListener{
+            val intent = Intent(this,DataTambahan::class.java)
             startActivity(intent)
         }
 

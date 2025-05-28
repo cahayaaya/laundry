@@ -38,4 +38,6 @@
     <string name="validasi_Cabang_Layanan">Layanan Cabang</string>
     <string name="sukses_simpan_cabang">simpan cabang</string>
     <string name="gagal_simpan_cabang">gagal cabang</string>
+    <string name="tvTitlePegawai">tambah pegawai</string>
+    <string name="validasi_Pelanggan_Cabang">Cabang tidak boleh kosong</string>
 </resources>

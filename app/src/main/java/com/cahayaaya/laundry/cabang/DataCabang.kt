@@ -14,7 +14,6 @@ import com.cahayaaya.laundry.adapter.DataCabangAdapter
 import com.cahayaaya.laundry.adapter.DataLayananAdapter
 import com.cahayaaya.laundry.adapter.DataPegawaiAdapter
 import com.cahayaaya.laundry.modeldata.ModelCabang
-import com.cahayaaya.laundry.modeldata.ModelLayanan
 import com.cahayaaya.laundry.modeldata.ModelPegawai
 import com.cahayaaya.laundry.pegawai.TambahPegawai
 import com.google.android.material.floatingactionbutton.FloatingActionButton

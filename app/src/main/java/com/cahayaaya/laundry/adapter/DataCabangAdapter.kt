@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.cahayaaya.laundry.modeldata.ModelPegawai
 import com.cahayaaya.laundry.R
 import com.cahayaaya.laundry.modeldata.ModelCabang
-import com.cahayaaya.laundry.modeldata.ModelLayanan
 
 class DataCabangAdapter(
     private val listcabang: ArrayList<ModelCabang>

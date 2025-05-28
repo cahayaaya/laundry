@@ -1,5 +1,6 @@
 package com.cahayaaya.laundry.layanan
 
+import ModelLayanan
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
@@ -12,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.cahayaaya.laundry.R
 import com.cahayaaya.laundry.adapter.DataLayananAdapter
 import com.cahayaaya.laundry.adapter.DataPegawaiAdapter
-import com.cahayaaya.laundry.modeldata.ModelLayanan
 import com.cahayaaya.laundry.modeldata.ModelPegawai
 import com.cahayaaya.laundry.pegawai.TambahPegawai
 import com.google.android.material.floatingactionbutton.FloatingActionButton

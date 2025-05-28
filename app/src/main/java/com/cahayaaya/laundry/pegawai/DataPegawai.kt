@@ -40,8 +40,20 @@ class DataPegawai : AppCompatActivity() {
         rv_data_pegawai.layoutManager=layoutManager
         rv_data_pegawai.setHasFixedSize(true)
         pegawaiList = arrayListOf<ModelPegawai>()
-        tekan()
         getdata()
+
+        val bt_data_pegawai_tambah : FloatingActionButton = findViewById(R.id.bt_data_pegawai_tambah)
+        bt_data_pegawai_tambah.setOnClickListener {
+            val intent = Intent(this, TambahPegawai::class.java)
+            intent.putExtra("tvTitlePegawai", (this.getString(R.string.tvTitlePegawai)))
+            intent.putExtra("tvCard_Pegawai_Id", "")
+            intent.putExtra("tvCard_Nama_Pegawai", "")
+            intent.putExtra("tvCard_Pegawai_Alamat", "")
+            intent.putExtra("ttvCard_Pegawai_Cabang", "")
+            intent.putExtra("tvCard_Pegawai_noHP", "")
+            startActivity(intent)
+        }
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -49,6 +61,8 @@ class DataPegawai : AppCompatActivity() {
             insets
         }
     }
+
+
 
     fun getdata() {
         val query = myRef.orderByChild("idPegawai").limitToLast(100)
@@ -74,16 +88,6 @@ class DataPegawai : AppCompatActivity() {
     fun init() {
         rv_data_pegawai = findViewById(R.id.rv_data_pegawai)
         bt_data_pegawai_tambah = findViewById(R.id.bt_data_pegawai_tambah)
-        bt_data_pegawai_tambah.setOnClickListener {
-            val intent = Intent(this, TambahPegawai::class.java)
-            startActivity(intent)
-        }
-    }
-    fun tekan() {
-        bt_data_pegawai_tambah.setOnClickListener {
-            val intent = Intent(this, TambahPegawai::class.java)
-            startActivity(intent)
-        }
     }
 
 

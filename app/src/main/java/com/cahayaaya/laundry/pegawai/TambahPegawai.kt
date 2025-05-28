@@ -13,18 +13,21 @@ import com.cahayaaya.laundry.R
 import com.cahayaaya.laundry.modeldata.ModelPegawai
 import com.cahayaaya.laundry.modeldata.ModelPelanggan
 import com.google.firebase.database.FirebaseDatabase
+import java.text.SimpleDateFormat
+import java.util.Locale
+import java.util.Date
 
 class TambahPegawai : AppCompatActivity() {
     val  database = FirebaseDatabase.getInstance()
     val myRef = database.getReference("pegawai")
-    lateinit var tvCard_Pegawai_Id: TextView
+    lateinit var tvTitlePegawai: TextView
     lateinit var tvCard_Nama_Pegawai: EditText
     lateinit var tvCard_Pegawai_Alamat: EditText
     lateinit var tvCard_Pegawai_noHP: EditText
     lateinit var tvCard_Pegawai_Cabang: EditText
     lateinit var btsimpanPegawai: Button
 
-    val  idPegawai:String=""
+    var idPegawai:String=""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -43,7 +46,7 @@ class TambahPegawai : AppCompatActivity() {
     }
 
     fun  init(){
-        tvCard_Pegawai_Id = findViewById(R.id.tvTitlePegawai)
+        tvTitlePegawai = findViewById(R.id.tvTitlePegawai)
         tvCard_Nama_Pegawai = findViewById(R.id.etgaris1pegawai)
         tvCard_Pegawai_Alamat = findViewById(R.id.etgaris2pegawai)
         tvCard_Pegawai_noHP = findViewById(R.id.etgaris3pegawai)
@@ -59,11 +62,7 @@ class TambahPegawai : AppCompatActivity() {
         //validasi data
         if (nama.isEmpty()) {
             tvCard_Nama_Pegawai.error = this.getString(R.string.validasi_Pelanggan_Nama)
-            Toast.makeText(
-                this,
-                this.getString(R.string.validasi_Pelanggan_Nama),
-                Toast.LENGTH_SHORT
-            ).show()
+            Toast.makeText(this, this.getString(R.string.validasi_Pelanggan_Nama),Toast.LENGTH_SHORT).show()
             tvCard_Nama_Pegawai.requestFocus()
             return
         }
@@ -111,12 +110,14 @@ class TambahPegawai : AppCompatActivity() {
     fun simpan(){
         val  pegawaiBaru = myRef.push()
         val pegawaiId = pegawaiBaru.key
+        val currentTime = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(Date())
         val data = ModelPegawai(
             pegawaiId.toString(),
             tvCard_Nama_Pegawai.text.toString(),
             tvCard_Pegawai_Alamat.text.toString(),
             tvCard_Pegawai_noHP.text.toString(),
             tvCard_Pegawai_Cabang.text.toString(),
+            currentTime
 
         )
         pegawaiBaru.setValue(data)
@@ -129,18 +130,18 @@ class TambahPegawai : AppCompatActivity() {
             }
     }
     fun  getData(){
-        tvCard_Pegawai_Id.text = intent.getStringExtra("idPegawai") ?: ""
-        val judul = intent.getStringExtra("judul")
+        idPegawai = intent.getStringExtra("idPegawai").toString()
+        val judul = intent.getStringExtra("tvTitlePegawai")
         val nama = intent.getStringExtra("namaPegawai")
         val alamat = intent.getStringExtra("alamatPegawai")
         val hp = intent.getStringExtra("noHPPegawai")
-        val cabang = intent.getStringExtra("idCAbang")
-        tvCard_Pegawai_Id.text = judul
+        val cabang = intent.getStringExtra("idCabang")
+        tvTitlePegawai.text = judul
         tvCard_Nama_Pegawai.setText(nama)
         tvCard_Pegawai_Alamat.setText(alamat)
         tvCard_Pegawai_noHP.setText(hp)
         tvCard_Pegawai_Cabang.setText(cabang)
-        if (!tvCard_Pegawai_Id.text.equals(this.getString(R.string.card_pegawai_tambah))){
+        if (!tvTitlePegawai.text.equals(this.getString(R.string.card_pegawai_tambah))){
             if(judul.equals("Edit Pegawai")){
                 mati()
                 btsimpanPegawai.text="Sunting"
@@ -165,24 +166,22 @@ class TambahPegawai : AppCompatActivity() {
     }
     fun update(){
 
-        val timestamp = System.currentTimeMillis()
-
         val pegawaiRef = database.getReference("Pegawai").child(idPegawai)
+        val currentTime = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(Date())
         val data = ModelPegawai(
             idPegawai,
             tvCard_Nama_Pegawai.text.toString(),
             tvCard_Pegawai_Alamat.text.toString(),
             tvCard_Pegawai_noHP.text.toString(),
             tvCard_Pegawai_Cabang.text.toString(),
-            timestamp.toString()
+            currentTime
         )
         // Buat Map untuk update data
         val updateData = mutableMapOf<String, Any>()
         updateData["namaPegawai"] = data.tvCard_Nama_Pegawai.toString()
         updateData["alamatPegawai"] = data.tvCard_Pegawai_Alamat.toString()
         updateData["noHPPegawai"] = data.tvCard_Pegawai_noHP.toString()
-        updateData["idPegawai"] = data.tvCard_Pegawai_Id.toString()
-        updateData["timestamp"] = data.timestamp.toString()
+        updateData["cabangPegawai"] = data.tvCard_Pegawai_Cabang.toString()
 
         pegawaiRef.updateChildren(updateData).addOnSuccessListener {
             Toast.makeText(this@TambahPegawai,"Data Pegawai Berhasil Diperbarui",Toast.LENGTH_SHORT)

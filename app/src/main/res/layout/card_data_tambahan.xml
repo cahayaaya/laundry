@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/cvCard_LayananTambahan"
+    android:id="@+id/cvCard_DataTambahan"
     android:padding="16dp"
     android:layout_margin="5dp"
     app:cardCornerRadius="10dp">
@@ -15,13 +15,13 @@
             android:backgroundTint="#DEB3B3">
 
             <TextView
-                android:id="@+id/tvCardIdLayananTambahan"
+                android:id="@+id/tvCardIdTambahan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:paddingBottom="4dp"
-                android:text="ID Layanan"
+                android:text="ID Tambahan"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -29,29 +29,37 @@
 
 
         <LinearLayout
-            android:id="@+id/lvCardLayananTambahan"
+            android:id="@+id/lvCardTambahan"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="100dp"
             android:layout_marginTop="20dp"
             android:background="#E0C4C4"
             android:orientation="vertical">
 
 
             <TextView
-                android:id="@+id/tvNamaLayananTambahan"
+                android:id="@+id/tvNamaTambahan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="25dp"
-                android:text="@string/card_layanan_nama"
+                android:text="Nama"
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/tvHargaLayananTambahan"
+                android:id="@+id/tvHargaTambahan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="@string/card_layanan_harga"
+                android:text="Harga"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvCabangTambahan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Cabang"
                 android:textSize="16sp" />
 
         </LinearLayout>

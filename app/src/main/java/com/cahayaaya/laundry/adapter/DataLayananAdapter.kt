@@ -1,5 +1,6 @@
 package com.cahayaaya.laundry.adapter
 
+import ModelLayanan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,7 +9,6 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.cahayaaya.laundry.modeldata.ModelPegawai
 import com.cahayaaya.laundry.R
-import com.cahayaaya.laundry.modeldata.ModelLayanan
 
 class DataLayananAdapter(
     private val listlayanan: ArrayList<ModelLayanan>
@@ -27,7 +27,7 @@ class DataLayananAdapter(
         holder.tvID.text = item.tvCard_Layanan_Id
         holder.tvNama.text = item.tvCard_Pelanggan_Layanan
         holder.tvHarga.text = item.tvCard_Pelanggan_Harga
-        holder.tvcabang.text = item.tvCard_Pelanggan_NamaCabang
+
 
 
     }

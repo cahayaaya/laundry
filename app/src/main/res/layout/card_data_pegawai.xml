@@ -67,16 +67,6 @@
             android:layout_marginTop="6dp"/>
 
         <TextView
-            android:id="@+id/tvCard_Pegawai_Terdaftar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/card_pegawai_terdaftar"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:layout_marginTop="6dp"/>
-
-        <TextView
             android:id="@+id/tvCard_Pegawai_Cabang"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

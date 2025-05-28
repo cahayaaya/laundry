@@ -12,30 +12,28 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.cahayaaya.laundry.adapter.PilihLayananAdapter
-import com.cahayaaya.laundry.adapter.PilihPelangganAdapter
-import com.cahayaaya.laundry.modeldata.ModelPelanggan
 import com.google.firebase.database.*
 
-class pilih_pelanggan_MainActivity2 : AppCompatActivity() {
+class pilihlayanan_activity : AppCompatActivity() {
 
-    private lateinit var rvpilihPelanggan: RecyclerView
+    private lateinit var rvpilihLayanan: RecyclerView
     private lateinit var tvKosong: TextView
     private lateinit var searchView: SearchView
-    private lateinit var adapter: PilihPelangganAdapter
-    private val pelangganList = mutableListOf<ModelPelanggan>()
+    private lateinit var adapter: PilihLayananAdapter
+    private val layananList = mutableListOf<ModelLayanan>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_pilih_pelanggan_main2)
+        setContentView(R.layout.activity_pilihlayanan_main2)
 
         tvKosong = findViewById(R.id.tvPilihPelangganKosong)
-        rvpilihPelanggan = findViewById(R.id.rv_pilih_data_pelanggan)
-        searchView = findViewById(R.id.searchViewPelanggan)
+        rvpilihLayanan = findViewById(R.id.rv_pilih_data_layanan)
+        searchView = findViewById(R.id.searchViewLayananPilih)
 
-        rvpilihPelanggan.layoutManager = LinearLayoutManager(this)
-        adapter = PilihPelangganAdapter(this, pelangganList, tvKosong)
-        rvpilihPelanggan.adapter = adapter
+        rvpilihLayanan.layoutManager = LinearLayoutManager(this)
+        adapter = PilihLayananAdapter(this, layananList, tvKosong)
+        rvpilihLayanan.adapter = adapter
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?) = false
@@ -56,17 +54,17 @@ class pilih_pelanggan_MainActivity2 : AppCompatActivity() {
 
     private fun getData() {
         val db = FirebaseDatabase.getInstance()
-        val myRef = db.getReference("pelanggan")
+        val myRef = db.getReference("layanan")
 
         myRef.limitToLast(100).addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                pelangganList.clear()
+                layananList.clear()
                 if (snapshot.exists()) {
                     for (data in snapshot.children) {
-                        val pelanggan = data.getValue(ModelPelanggan::class.java)
-                        pelanggan?.let { pelangganList.add(it) }
+                        val layanan = data.getValue(ModelLayanan::class.java)
+                        layanan?.let { layananList.add(it) }
                     }
-                    val reversedList = pelangganList.reversed()
+                    val reversedList = layananList.reversed()
                     adapter.updateData(reversedList)
                     tvKosong.visibility = View.GONE
                 } else {

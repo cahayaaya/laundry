@@ -35,7 +35,6 @@ class DataPegawaiAdapter(
         holder.tvAlamat.text = "Alamat : ${item.tvCard_Pegawai_Alamat}"
         holder.tvNoHP.text = "No HP : ${item.tvCard_Pegawai_noHP}"
         holder.tvcabang.text = "Cabang : ${item.tvCard_Pegawai_Cabang}"
-        holder.tvterdaftar.text = "Terdaftar : ${item.tvCard_Pegawai_Terdaftar}"
 
         holder.cvCard.setOnClickListener {
         val intent = Intent(appContext, TambahPegawai::class.java)
@@ -44,7 +43,7 @@ class DataPegawaiAdapter(
         intent.putExtra("namapegawai", item.tvCard_Nama_Pegawai)
         intent.putExtra("noHPPegawai", item.tvCard_Pegawai_noHP)
         intent.putExtra("alamatPegawai", item.tvCard_Pegawai_Alamat)
-        intent.putExtra("idCabang", item.tvCard_Pegawai_Id)
+        intent.putExtra("idCabang", item.tvCard_Pegawai_Cabang)
         appContext.startActivity(intent)
     }
 
@@ -67,7 +66,6 @@ class DataPegawaiAdapter(
         val tvNama: TextView = itemView.findViewById(R.id.tvCard_Nama_Pegawai)
         val tvAlamat: TextView = itemView.findViewById(R.id.tvCard_Pegawai_Alamat)
         val tvNoHP: TextView = itemView.findViewById(R.id.tvCard_Pegawai_No)
-        val tvterdaftar: TextView = itemView.findViewById(R.id.tvCard_Pegawai_Terdaftar)
         val tvcabang: TextView = itemView.findViewById(R.id.tvCard_Pegawai_Cabang)
         val btCard_Pegawai_Hubungi: TextView = itemView.findViewById(R.id.btCard_Pegawai_Hubungi)
         val btCard_Pegawai_Lihat: TextView = itemView.findViewById(R.id.btCard_Pegawai_Lihat)

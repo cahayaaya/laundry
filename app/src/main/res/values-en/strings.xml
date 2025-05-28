@@ -39,4 +39,6 @@
     <string name="validasi_Cabang_Layanan">Service Branch</string>
     <string name="sukses_simpan_cabang">Successful Save Branch</string>
     <string name="gagal_simpan_cabang">Failed Save Branch</string>
+    <string name="tvTitlePegawai">Add Employee</string>
+    <string name="validasi_Pelanggan_Cabang">Branch cannont be empety</string>
 </resources>

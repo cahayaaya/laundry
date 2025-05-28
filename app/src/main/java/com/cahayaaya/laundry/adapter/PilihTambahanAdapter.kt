@@ -14,13 +14,13 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.cahayaaya.laundry.R
 
-class PilihLayananAdapter(
+class PilihTambahanAdapter(
     private val context: Context,
-    private val listLayanan: MutableList<ModelLayanan>,
+    private val listTambahan: MutableList<ModelLayanan>,
     private val tvKosong: TextView
-) : RecyclerView.Adapter<PilihLayananAdapter.ViewHolder>(), Filterable {
+) : RecyclerView.Adapter<PilihTambahanAdapter.ViewHolder>(), Filterable {
 
-    private var filteredList: MutableList<ModelLayanan> = listLayanan.toMutableList()
+    private var filteredList: MutableList<ModelLayanan> = listTambahan.toMutableList()
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val cvCard: CardView = view.findViewById(R.id.cvCard_LayananTambahan)

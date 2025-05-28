@@ -20,6 +20,7 @@ class TambahPelanggan : AppCompatActivity() {
     lateinit var etNama:EditText
     lateinit var etAlamat: EditText
     lateinit var etNoHP: EditText
+    lateinit var etCabang: EditText
     lateinit var btSimpan:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,11 +43,13 @@ class TambahPelanggan : AppCompatActivity() {
         etAlamat = findViewById(R.id.etgaris2pelanggan)
         etNoHP = findViewById(R.id.etgaris3pelanggan)
         btSimpan = findViewById(R.id.btsimpanpelanggan)
+        etCabang = findViewById(R.id.etgaris4pelanggan)
     }
     fun  cekValidasi() {
         val nama = etNama.text.toString()
         val alamat = etAlamat.text.toString()
         val noHP = etNoHP.text.toString()
+        val cabang = etCabang.text.toString()
 
         //validasi data
         if (nama.isEmpty()) {
@@ -77,6 +80,17 @@ class TambahPelanggan : AppCompatActivity() {
                 Toast.LENGTH_SHORT
             ).show()
             etNoHP.requestFocus()
+            return
+        }
+
+        if (cabang.isEmpty()) {
+            etCabang.error = this.getString(R.string.validasi_Pelanggan_Cabang)
+            Toast.makeText(
+                this,
+                this.getString(R.string.validasi_Pelanggan_Cabang),
+                Toast.LENGTH_SHORT
+            ).show()
+            etCabang.requestFocus()
             return
         }
         simpan()

@@ -15,26 +15,39 @@
         android:theme="@style/Theme.Laundry"
         tools:targetApi="31">
         <activity
-            android:name=".pilihlayanan_MainActivity2"
+            android:name=".activity_pilih_tambahan"
+            android:exported="false" />
+        <!-- Daftarkan activity TambahTambahan di sini -->
+        <activity
+            android:name=".tambahan.DataTambahan"
+            android:exported="false" />
+        <activity
+            android:name=".tambahan.TambahTambahan"
+            android:exported="false" />
+        <activity
+            android:name=".pilihlayanan_activity"
             android:exported="false" />
         <activity
             android:name=".pilih_pelanggan_MainActivity2"
             android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".pilih_data_pelanggan_MainActivity2"-->
-<!--            android:exported="false" />-->
+        <!--
+        <activity
+                    android:name=".pilih_data_pelanggan_MainActivity2"
+                    android:exported="false" />
+        -->
         <activity
             android:name=".transaksi.transaksiMainActivity"
             android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".TransaksiMainActivity2"-->
-<!--            android:exported="false" />-->
-<!--        <activity-->
-<!--            android:name=".laman_login"-->
-<!--            android:exported="false" />-->
+        <!--
         <activity
-            android:name=".activity_login"
-            android:exported="false" />
+                    android:name=".TransaksiMainActivity2"
+                    android:exported="false" />
+        -->
+        <!--
+        <activity
+                    android:name=".laman_login"
+                    android:exported="false" />
+        -->
         <activity
             android:name=".cabang.TambahCabang"
             android:exported="false" />
