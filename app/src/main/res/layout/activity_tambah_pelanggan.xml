@@ -132,7 +132,6 @@
         android:layout_height="48dp"
         android:background="@drawable/rectangle"
         android:hint="Masukkan Cabang"
-        android:inputType="phone"
         android:maxLength="14"
         android:layout_marginTop="10dp"
         android:textColor="@color/black"

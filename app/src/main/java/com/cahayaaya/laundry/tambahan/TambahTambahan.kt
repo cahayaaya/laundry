@@ -5,83 +5,81 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.cahayaaya.laundry.R
-
 import com.cahayaaya.laundry.modeldata.ModelTambahan
 import com.google.firebase.database.FirebaseDatabase
 
-class TambahTambahan : AppCompatActivity() { // ✅ WARISI AppCompatActivity
+class TambahTambahan : AppCompatActivity() {
 
+    // Referensi Firebase
     private val database = FirebaseDatabase.getInstance()
     private val myRef = database.getReference("tambahan")
 
+    // View
     private lateinit var tvTitle: TextView
-    private lateinit var etgaris1: EditText
-    private lateinit var etgaris2: EditText
-    private lateinit var etgaris3: EditText
-    private lateinit var btsimpan: Button
+    private lateinit var etNama: EditText
+    private lateinit var etHarga: EditText
+    private lateinit var etCabang: EditText
+    private lateinit var btnSimpan: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_tambah_tambahan) // GANTI layout yg benar
+        setContentView(R.layout.activity_tambah_tambahan)
 
-        init() // pastikan ID-nya cocok dengan isi XML
+        initViews()
 
-        btsimpan.setOnClickListener {
-            cekValidasi()
+        btnSimpan.setOnClickListener {
+            validateAndSave()
         }
     }
 
-
-    fun init(){
+    private fun initViews() {
         tvTitle = findViewById(R.id.tvTitleTambahan)
-        etgaris1 = findViewById(R.id.etgaris1tambahan)
-        etgaris2 = findViewById(R.id.etgaris2tambahan)
-        etgaris3 = findViewById(R.id.etgaris3tambahan)
-        btsimpan = findViewById(R.id.btsimpantambahan)
+        etNama = findViewById(R.id.etgaris1tambahan)
+        etHarga = findViewById(R.id.etgaris2tambahan)
+        etCabang = findViewById(R.id.etgaris3tambahan)
+        btnSimpan = findViewById(R.id.btsimpantambahan)
     }
 
-    private fun cekValidasi() {
-        val nama = etgaris1.text.toString()
-        val harga = etgaris2.text.toString()
-        val cabang = etgaris3.text.toString()
+    private fun validateAndSave() {
+        val nama = etNama.text.toString().trim()
+        val harga = etHarga.text.toString().trim()
+        val cabang = etCabang.text.toString().trim()
 
         if (nama.isEmpty()) {
-            etgaris1.error = getString(R.string.validasi_Layanan_Nama)
-            etgaris1.requestFocus()
-            return
-        }
-        if (harga.isEmpty()) {
-            etgaris2.error = getString(R.string.validasi_Layanan_Harga)
-            etgaris2.requestFocus()
-            return
-        }
-        if (cabang.isEmpty()) {
-            etgaris3.error = getString(R.string.validasi_Layanan_namacabang)
-            etgaris3.requestFocus()
+            etNama.error = getString(R.string.validasi_Layanan_Nama)
+            etNama.requestFocus()
             return
         }
 
-        simpan(nama, harga, cabang)
+        if (harga.isEmpty()) {
+            etHarga.error = getString(R.string.validasi_Layanan_Harga)
+            etHarga.requestFocus()
+            return
+        }
+
+        if (cabang.isEmpty()) {
+            etCabang.error = getString(R.string.validasi_Layanan_namacabang)
+            etCabang.requestFocus()
+            return
+        }
+
+        saveToFirebase(nama, harga, cabang)
     }
 
-    private fun simpan(nama: String, harga: String, cabang: String) {
-        val tambahanBaru = myRef.push()
-        val id = tambahanBaru.key ?: ""
+    private fun saveToFirebase(nama: String, harga: String, cabang: String) {
+        val newEntry = myRef.push()
+        val id = newEntry.key ?: ""
 
         val data = ModelTambahan(
             idtambahan = id,
             namatambahan = nama,
             hargatambahan = harga,
-            cabangtambahan = cabang // ← Tambahkan properti ini di model
+            cabangtambahan = cabang
         )
 
-        tambahanBaru.setValue(data)
+        newEntry.setValue(data)
             .addOnSuccessListener {
                 Toast.makeText(this, getString(R.string.sukses_simpan_pelanggan), Toast.LENGTH_SHORT).show()
                 finish()
@@ -90,5 +88,4 @@ class TambahTambahan : AppCompatActivity() { // ✅ WARISI AppCompatActivity
                 Toast.makeText(this, getString(R.string.gagal_simpan_pelanggan), Toast.LENGTH_SHORT).show()
             }
     }
-
 }

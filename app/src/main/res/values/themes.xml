@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.Laundry" parent="Base.Theme.Laundry" />
+
+    <color name="text">
+        #000000
+    </color>
+    <color name="pink">#DEB3B3</color>
+    <color name="textpembayaran">#000000</color>
 </resources>

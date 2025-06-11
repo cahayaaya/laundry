@@ -12,7 +12,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:backgroundTint="#DEB3B3">
+            android:backgroundTint="@color/pink">
 
             <TextView
                 android:id="@+id/tvCardIdLayananTambahan"
@@ -23,6 +23,7 @@
                 android:paddingBottom="4dp"
                 android:text="ID Layanan"
                 android:textSize="16sp"
+                android:textColor="@color/text"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -33,7 +34,6 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginTop="20dp"
-            android:background="#E0C4C4"
             android:orientation="vertical">
 
 
@@ -44,6 +44,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="25dp"
                 android:text="@string/card_layanan_nama"
+                android:textColor="@color/text"
                 android:textSize="16sp" />
 
             <TextView
@@ -51,6 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
+                android:textColor="@color/text"
                 android:text="@string/card_layanan_harga"
                 android:textSize="16sp" />
 

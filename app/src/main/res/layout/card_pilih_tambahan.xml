@@ -12,14 +12,15 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:backgroundTint="#DEB3B3">
+            android:backgroundTint="@color/pink">
 
             <TextView
                 android:id="@+id/tvCardIdPilihTambahan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
+                android:textColor="@color/text"
                 android:paddingBottom="4dp"
                 android:text="ID Tambahan"
                 android:textSize="16sp"
@@ -33,7 +34,6 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginTop="20dp"
-            android:background="#E0C4C4"
             android:orientation="vertical">
 
 
@@ -43,6 +43,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="25dp"
+                android:textColor="@color/text"
                 android:text="Nama"
                 android:textSize="16sp" />
 
@@ -52,6 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="Harga"
+                android:textColor="@color/text"
                 android:textSize="16sp" />
 
 

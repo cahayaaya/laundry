@@ -1,6 +1,5 @@
 package com.cahayaaya.laundry
 
-import ModelLayanan
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
@@ -11,10 +10,12 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.cahayaaya.laundry.adapter.PilihLayananAdapter
 import com.cahayaaya.laundry.adapter.PilihPelangganAdapter
 import com.cahayaaya.laundry.modeldata.ModelPelanggan
-import com.google.firebase.database.*
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class pilih_pelanggan_MainActivity2 : AppCompatActivity() {
 

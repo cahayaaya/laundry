@@ -12,7 +12,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="35dp"
-        android:backgroundTint="#DEB3B3"
+        android:backgroundTint="@color/pink"
         app:cardElevation="2dp">
 
         <TextView
@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/card_pegawai_ID"
-            android:textColor="@color/black"
+            android:textColor="@color/text"
             android:textSize="14sp"
             android:textStyle="bold"
             android:layout_gravity="center_vertical"
@@ -33,7 +33,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#E0C4C4"
         android:padding="10dp">
 
         <TextView
@@ -41,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/card_pegawai_Nama"
-            android:textColor="@color/black"
+            android:textColor="@color/text"
             android:textSize="14sp"
             android:textStyle="bold"
             android:layout_marginTop="30dp"/>
@@ -51,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/card_pelanggan_alamat"
-            android:textColor="@color/black"
+            android:textColor="@color/text"
             android:textSize="14sp"
             android:textStyle="bold"
             android:layout_marginTop="6dp"/>
@@ -62,7 +61,7 @@
             android:layout_height="wrap_content"
             android:text="@string/card_pelanggan_NoHp"
             android:textSize="14sp"
-            android:textColor="@color/black"
+            android:textColor="@color/text"
             android:textStyle="bold"
             android:layout_marginTop="6dp"/>
 
@@ -71,7 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/card_pegawai_Cabang"
-            android:textColor="@color/black"
+            android:textColor="@color/text"
             android:textSize="14sp"
             android:textStyle="bold"
             android:layout_marginTop="5dp"/>
@@ -91,8 +90,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/card_pelanggan_hubungi"
                 android:layout_marginEnd="5dp"
-                android:backgroundTint="#30175F"
-                android:textColor="@android:color/white"
+                android:backgroundTint="@color/pink"
+                android:textColor="@color/text"
                 android:textStyle="bold"/>
 
             <Button
@@ -101,8 +100,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/card_pelanggan_lihat"
                 android:layout_marginStart="5dp"
-                android:backgroundTint="#30175F"
-                android:textColor="@android:color/white"
+                android:backgroundTint="@color/pink"
+                android:textColor="@color/text"
                 android:textStyle="bold"/>
         </LinearLayout>
     </LinearLayout>

@@ -17,11 +17,12 @@
             android:id="@+id/cvCardIDPT"
             android:layout_width="match_parent"
             android:layout_height="33dp"
-            android:backgroundTint="#E195AB">
+            >
 
             <TextView
                 android:id="@+id/cvCardIdPilihTambahan1"
-                android:textColor="@color/black"
+                android:textColor="@color/text"
+                android:background="@color/pink"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="id layanan"
@@ -49,7 +50,7 @@
                     android:id="@+id/tvNamaPilihTambahan1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
+                    android:textColor="@color/text"
                     android:text="nama layanan" />
 
                 <TextView
@@ -57,7 +58,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="harga"
-                    android:textColor="@color/black"
+                    android:textColor="@color/text"
                     android:layout_marginTop="5dp" />
             </LinearLayout>
 

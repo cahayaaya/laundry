@@ -4,4 +4,7 @@
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
+    <color name="text">#FFFFFF</color>
+    <color name="pink">#901E3E</color>
+    <color name="textpembayaran">#000000</color>
 </resources>

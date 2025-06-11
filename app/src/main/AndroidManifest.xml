@@ -15,8 +15,9 @@
         android:theme="@style/Theme.Laundry"
         tools:targetApi="31">
         <activity
-            android:name=".activity_pilih_tambahan"
+            android:name=".transaksi.activity_pilih_tambahan"
             android:exported="false" />
+
         <!-- Daftarkan activity TambahTambahan di sini -->
         <activity
             android:name=".tambahan.DataTambahan"
@@ -38,11 +39,21 @@
         <activity
             android:name=".transaksi.transaksiMainActivity"
             android:exported="false" />
-        <!--
         <activity
-                    android:name=".TransaksiMainActivity2"
-                    android:exported="false" />
-        -->
+            android:name=".transaksi.konfirmasiTransaksiActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".transaksi.activity_bayarnanti"
+            android:exported="false" />
+
+
+
+    <!--
+    <activity
+                android:name=".TransaksiMainActivity2"
+                android:exported="false" />
+    -->
         <!--
         <activity
                     android:name=".laman_login"
